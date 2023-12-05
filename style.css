@@ -1,0 +1,15 @@
+body{
+    display:flex;
+    flex-direction: column;
+}
+
+header{
+    text-align: center;
+    border: 10px solid greenyellow;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+#container{
+    border: 10px solid red;
+}
