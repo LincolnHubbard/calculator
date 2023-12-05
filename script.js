@@ -56,7 +56,9 @@ function divide(value1, value2){
 }
 
 /* CALCULATOR FUNCTIONS */
-function operate(operator, value1, value2){
+function operate(operator){
+    let value1 = parseInt(exprScreen.textContent);
+    let value2 = parseInt(answerScreen.textContent);
     switch (operator) {
         case operations.ADD:
             return add(value1, value2);
@@ -77,10 +79,6 @@ function operate(operator, value1, value2){
 
 function updateOperator(key){
     if (answerScreen.textContent === '') return;
-    // if (operator !== operator.NONE){
-    //     equalsButtonPressed();
-    // };
-
     switch (key) {
         case "+":
             operator = operations.ADD;
@@ -104,10 +102,10 @@ function updateOperator(key){
 }
 
 function equalsButtonPressed() {
-    let value1 = parseInt(exprScreen.textContent);
-    let value2 = parseInt(answerScreen.textContent);
+    // let value1 = parseInt(exprScreen.textContent);
+    // let value2 = parseInt(answerScreen.textContent);
     exprScreen.textContent = exprScreen.textContent + answerScreen.textContent;
-    answerScreen.textContent = operate(operator, value1, value2);
+    answerScreen.textContent = operate(operator);
     operator = operator.NONE;
 }
 

@@ -2,18 +2,21 @@ body{
     display:flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #285C6F;
+    font-family: Verdana, sans-serif;
+    font-weight: normal;
 }
 
 header{
     text-align: center;
-    border: 10px solid greenyellow;
     margin-left: 150px;
     margin-right: 150px;
 }
 
 #container{
-    border: 10px solid red;
-    background-color: brown;
+    background-color: #0d1f28;
     width: 340px;
     display: flex;
     flex-direction: column;
@@ -22,35 +25,55 @@ header{
 }
 
 #screen{
-    border: 1px dotted black;
-    background-color: aquamarine;
-    width: 300px;
+    background-color: #BDD9C0;
+    width: 270px;
     /* height: 135px; */
     margin: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 #expression{
     height: 45px;
-    border: 1px dotted black;
-    box-sizing: border-box;
+    /* border: 1px dotted black;
+    box-sizing: border-box; */
 }
 
 #answer{
     height: 70px;
+    font-size: 3rem;
 }
 
 #buttons{
-    border: 2px solid blue;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(5, 60px);
+    gap: 5px;
     margin: 10px;
-    width: 220px;
+
 }
 
 button{
+    background-color: #72a8a3;
+    font-size:  2rem;
+    border: none;
+    outline: none;
     cursor: pointer;
-    width: 40px;
+    /* width: 40px;
     height: 40px;
-    margin: 5px;
+    margin: 5px; */
+}
+button:hover{
+    background-color: #bcdad7;
+}
+
+.span-two{
+    grid-column: span 2;
 }
