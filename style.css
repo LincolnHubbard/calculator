@@ -1,3 +1,11 @@
+html, body{
+    height: 100%;
+}
+
+#content{
+    flex: 1 0 auto;
+}
+
 body{
     display:flex;
     flex-direction: column;
@@ -21,7 +29,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* word-wrap: normal; */
+    border-radius: 10px;
 }
 
 #screen{
@@ -36,6 +44,7 @@ header{
     align-items: flex-end;
     word-wrap: break-word;
     word-break: break-all;
+    border-radius: 10px;
 }
 
 #expression{
@@ -70,10 +79,18 @@ button{
     height: 40px;
     margin: 5px; */
 }
+
+.operator{
+    background-color: #E1C894;
+}
 button:hover{
     background-color: #bcdad7;
 }
 
 .span-two{
     grid-column: span 2;
+}
+
+footer{
+    flex-shrink: 0;
 }
